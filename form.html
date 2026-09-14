@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Pendaftaran — Latihan HTML Lanjutan</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f6f9;
+            color: #333333;
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 650px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 8px;
+            font-size: 24px;
+        }
+
+        p.description {
+            margin-bottom: 24px;
+            color: #666666;
+            font-size: 14px;
+        }
+
+        fieldset {
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 24px;
+            background-color: #fafafa;
+        }
+
+        legend {
+            font-weight: 600;
+            color: #2c3e50;
+            padding: 0 10px;
+            font-size: 16px;
+        }
+
+        label {
+            display: block;
+            margin-top: 14px;
+            margin-bottom: 6px;
+            font-size: 14px;
+            font-weight: 600;
+            color: #444444;
+        }
+
+        label:first-of-type {
+            margin-top: 0;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="date"],
+        input[type="number"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid #cccccc;
+            border-radius: 6px;
+            font-size: 14px;
+            font-family: inherit;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+            background-color: #ffffff;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #3498db;
+            box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .radio-group,
+        .checkbox-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-top: 6px;
+        }
+
+        .radio-group {
+            flex-direction: row;
+            gap: 20px;
+        }
+
+        .radio-group label,
+        .checkbox-group label {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-weight: normal;
+            margin-top: 0;
+            cursor: pointer;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            cursor: pointer;
+            accent-color: #2c3e50;
+        }
+
+        .required-mark {
+            color: #e74c3c;
+        }
+
+        button[type="submit"] {
+            width: 100%;
+            padding: 12px;
+            background-color: #2c3e50;
+            color: #ffffff;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #34495e;
+        }
+
+        button[type="submit"]:active {
+            transform: translateY(1px);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Form Pendaftaran Akun</h1>
+        <p class="description">Isi form berikut untuk mendaftar. Tanda <span class="required-mark">*</span> wajib diisi.</p>
+
+        <form action="#" method="post">
+
+            <!-- FIELDSET 1: Data Diri -->
+            <fieldset>
+                <legend>Data Diri</legend>
+
+                <label for="nama">Nama Lengkap <span class="required-mark">*</span></label>
+                <input type="text" id="nama" name="nama" placeholder="Masukkan nama lengkap" required>
+
+                <label for="email">Email <span class="required-mark">*</span></label>
+                <input type="email" id="email" name="email" placeholder="contoh@email.com" required>
+
+                <label for="password">Password <span class="required-mark">*</span></label>
+                <input type="password" id="password" name="password" placeholder="Minimal 8 karakter" minlength="8" required>
+
+                <label for="tanggal">Tanggal Lahir</label>
+                <input type="date" id="tanggal" name="tanggal">
+
+                <label>Jenis Kelamin <span class="required-mark">*</span></label>
+                <div class="radio-group">
+                    <label for="laki">
+                        <input type="radio" id="laki" name="jk" value="laki-laki" required> Laki-laki
+                    </label>
+                    <label for="perempuan">
+                        <input type="radio" id="perempuan" name="jk" value="perempuan"> Perempuan
+                    </label>
+                </div>
+            </fieldset>
+
+            <!-- FIELDSET 2: Informasi Akademik -->
+            <fieldset>
+                <legend>Informasi Akademik</legend>
+
+                <label for="prodi">Program Studi <span class="required-mark">*</span></label>
+                <select id="prodi" name="prodi" required>
+                    <option value="">-- Pilih Prodi --</option>
+                    <option value="d3-informatika">D3 Informatika</option>
+                    <option value="d3-multimedia">D3 Multimedia</option>
+                    <option value="d3-akuntansi">D3 Akuntansi</option>
+                    <option value="d3-administrasi">D3 Administrasi Bisnis</option>
+                </select>
+
+                <label for="angkatan">Angkatan</label>
+                <input type="number" id="angkatan" name="angkatan" min="2020" max="2030" placeholder="Contoh: 2026">
+
+                <label>Hobi / Minat (boleh pilih lebih dari 1):</label>
+                <div class="checkbox-group">
+                    <label for="hobi-web">
+                        <input type="checkbox" id="hobi-web" name="hobi" value="web-design"> Desain Web
+                    </label>
+                    <label for="hobi-mobile">
+                        <input type="checkbox" id="hobi-mobile" name="hobi" value="mobile-app"> Mobile App
+                    </label>
+                    <label for="hobi-ai">
+                        <input type="checkbox" id="hobi-ai" name="hobi" value="ai"> AI / Machine Learning
+                    </label>
+                    <label for="hobi-network">
+                        <input type="checkbox" id="hobi-network" name="hobi" value="networking"> Jaringan
+                    </label>
+                </div>
+            </fieldset>
+
+            <!-- FIELDSET 3: Pesan -->
+            <fieldset>
+                <legend>Catatan Tambahan</legend>
+
+                <label for="pesan">Tulis pesan / motivasi kamu:</label>
+                <textarea id="pesan" name="pesan" rows="5" placeholder="Tulis di sini..."></textarea>
+            </fieldset>
+
+            <!-- Tombol Submit -->
+            <button type="submit">Daftar Sekarang</button>
+
+        </form>
+    </div>
+
+</body>
+</html>
