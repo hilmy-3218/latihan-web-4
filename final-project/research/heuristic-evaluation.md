@@ -2,14 +2,14 @@
 
 ## Informasi Umum
 
-- **Nama Website:** [SMAN 1 Kudus]
-- **URL:** [https://www.sma1kudus.sch.id/]
-- **Halaman yang diriset:** [informasi kegiatan]
-- **Tanggal Riset:** [tanggal]
+- **Nama Website:** SMAN 1 Kudus
+- **URL:** https://www.sma1kudus.sch.id/
+- **Halaman yang diriset:** Informasi Kegiatan (Beranda / Kabar & Agenda Sekolah)
+- **Tanggal Riset:** 27 November 2026
 - **Anggota Kelompok:**
-  - [Nama 1] — [peran]
-  - [Nama 2] — [peran]
-  - [Nama 3] — [peran]
+  - Hilmiy — Evaluasi Heuristik & Desain Ulang Antarmuka
+  - Naila — Studi Banding (_Benchmarking_) & Riset Pengguna
+  - Dewa — Rasional Desain & Dokumentasi
 
 # Heuristic Evaluation — SMAN 1 Kudus (`sma1kudus.sch.id`)
 
